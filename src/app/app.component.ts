@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'startProjectRecepie';
+
+  setItem='Recepi'
+  onSeletctedData(item:string){
+    this.setItem=item
+
+  }
 }

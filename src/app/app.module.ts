@@ -1,16 +1,37 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './Header/header.component';
+
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+
+import { RecepiesComponent } from './Recepies/recepies.component';
+import { RecepiesDetailComponent } from './Recepies/recepies-detail/recepies-detail.component';
+import { RecepiesItemComponent } from './Recepies/recepies-list/recepies-item/recepies-item.component';
+import { RecepiesListComponent } from './Recepies/recepies-list/recepies-list.component';
+import { FormsModule } from '@angular/forms';
+import { DropDownDirective } from './sharedModels/DropDown.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    RecepiesComponent,
+    RecepiesDetailComponent,
+    RecepiesItemComponent,
+    RecepiesListComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    DropDownDirective
+
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+  BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

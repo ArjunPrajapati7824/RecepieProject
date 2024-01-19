@@ -1,0 +1,49 @@
+<div class="row" style="margin-top: 10px">
+  <div class="col-xs-12">
+    <button class="btn btn-success">Get Recepie</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-xs-12">
+   
+    <app-recepies-item *ngFor="let data of recepies"
+    [recepie]="data" (sendItemrecepie)="onReceipeList(data)"
+    ></app-recepies-item>
+  </div>
+</div>
+
+<!--card view-->
+<!-- <div  style="margin-top: 10px" >
+  <div
+    class="card-group "
+    style="height: 200px; width: 300px"
+    *ngFor="let data of recepies; let i=index"  
+    
+    
+
+
+  
+  <br *ngIf="i%2!=0 ? true : false">
+    <div class="card " style="margin-left: 20px">
+      <div class="whitespace" style="height: 100px; width: 150px">-->
+<!--Two way to set src-->
+<!--<img class="card-img-top" src={{data.imagePath}}  alt="Card image cap">--><!--1st string interpolatio/n-->
+<!--
+        <img
+
+          class="card-img-top"
+          [src]="data.imagePath"
+          alt="Card image cap" />
+          -->
+<!--2nd Property binding-->
+<!--
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{i+1}} {{ data.name }}</h5>
+        <p class="card-text">{{ data.description }}</p>
+      </div>
+
+    
+</div>
+</div>  -->

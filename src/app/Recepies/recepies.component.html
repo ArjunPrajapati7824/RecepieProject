@@ -1,0 +1,8 @@
+ <div class="row">
+    <div class="col-sm-5">
+        <app-recepies-list (sendAgain)="setItemRecipe=$event" ></app-recepies-list>
+    </div>
+    <div class="col-sm-7">
+        <app-recepies-detail  [finalData]="setItemRecipe"></app-recepies-detail>
+    </div>
+ </div>
