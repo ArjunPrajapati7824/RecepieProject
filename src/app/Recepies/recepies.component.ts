@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recepie } from './recepies.model';
+import { RecipeService } from './Services/RecepieService.service';
 
 @Component({
   selector: 'app-recepies',
@@ -7,34 +8,19 @@ import { Recepie } from './recepies.model';
   styleUrls: ['./recepies.component.css']
 })
 export class RecepiesComponent implements OnInit {
+  setItemRecipe!:Recepie
 
-  constructor() { }
+  constructor(private recepeService:RecipeService) { }
 
-  static val=false
   ngOnInit(): void {
+     this.recepeService.recepieSelected.subscribe((recipe:Recepie)=>{
+      this.setItemRecipe=recipe
+     })
     console.log("oninit load");
       
   }
 
-  setItemRecipe!:Recepie
 
-  // ngDoCheck(){
-  // console.log("receipe compoent event data",this.setItemRecipe);
-    
-  // }
-  
 
-  // itemrecepie:Recepie[]=[]
-
-  // setItemRecipef(data:Recepie){
-   
-  //   this.setItemRecipe.push(data)
-  //   RecepiesComponent.val=true
-  //   console.log("getData item",this.setItemRecipe);
-  //   // this.itemrecepie.push(data)
-  //   // this.itemrecepie.push(data)
-    
-  // }
-  
 
 }

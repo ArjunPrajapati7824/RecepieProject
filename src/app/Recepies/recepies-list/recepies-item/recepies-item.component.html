@@ -1,4 +1,5 @@
- <a href="#" class="list-group-item clearfix " >
+          
+          <a href="#" class="list-group-item clearfix "  (click)="getdata()" >
       <div class="d-flex justify-content-around">
         <div class="pull-left">
           <h4 lass="list-group-item-heading">{{ recepie.name }}</h4>
@@ -6,7 +7,6 @@
         </div>
         <div>
           <img
-          (click)="getdata(recepie)"
             [src]="recepie.imagePath"
             class="img-responsive"
             style="max-height: 80px"

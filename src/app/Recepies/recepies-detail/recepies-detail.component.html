@@ -23,6 +23,8 @@
     <div class="pull-left">
       <h4 lass="list-group-item-heading">{{ finalData.name }}</h4>
       <p class="list-group-item-text">{{ finalData.description }}</p>
+      <!-- <p class="list-group-item-text" *ngFor="let ing of finalData.ingrediants">
+        {{ ing.name }} {{ ing.amount }}</p> -->
     </div>
     <div>
       <img
@@ -32,17 +34,28 @@
       />
     </div>
   </div>
-  <hr />
 </a>
 
 <div *ngIf="finalData" class="dropdown">
   <div class="btn-group ">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Manage Recepie
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Too Shopping List</a></li>
+    <li><a class="dropdown-item" (click)="addIngrediants()" >Too Shopping List</a></li>
     <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
     <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
   </ul>
 </div>
+
+ <div class="row mt-3" >
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <p>What else you need to say?</p>
+      <li class="list-group-item" *ngFor="let ing of finalData.ingrediants">
+          {{ing.name}}
+          {{ing.amount}}
+      </li>
+    </ul>
+  </div>
+</div> 
