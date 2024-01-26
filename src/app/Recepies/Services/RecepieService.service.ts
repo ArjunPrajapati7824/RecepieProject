@@ -14,8 +14,8 @@ export class RecipeService{
         'veru cheezy',
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5paige7h1aqPHYUwoAIYH3Sn336u6sXCxEw&usqp=CAU ',
         [   
-            {name:'Tomato',amount:10},
-            {name:'rice',amount:20}
+            new Ingrediants('Tomato',10),
+            new Ingrediants('Rice',20),
         ]
         
         ),
@@ -23,8 +23,8 @@ export class RecipeService{
         'veru testy',
         'https://th.bing.com/th/id/OIP.VlSmK_DeoB4oAgKoC2d1OwHaHa?rs=1&pid=ImgDetMain',
         [               
-            {name:'Poteto',amount:40},
-            {name:'Onion',amount:50}
+            new Ingrediants('Onion',100),
+            new Ingrediants('Poteto',50),
             
         ]
         ),
@@ -33,7 +33,7 @@ export class RecipeService{
     
     constructor(private shoppingService : ShoppingListService){}
     addIngrediantsShopping(ingrediants:Ingrediants[]){
-        this.shoppingService.addIngrediants(ingrediants)
+        this.shoppingService.addIngrdiantFromRecepie(ingrediants)
       }
 
       getRecepies(){

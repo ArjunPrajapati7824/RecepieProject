@@ -21,6 +21,8 @@ export class RecepiesDetailComponent implements OnInit {
   }
 
   addIngrediants(){
+    console.log(this.finalData.ingrediants);
+    
     this.service.addIngrediantsShopping(this.finalData.ingrediants)
   }
 
