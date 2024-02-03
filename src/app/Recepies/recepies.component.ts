@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recepie } from './recepies.model';
 import { RecipeService } from './Services/RecepieService.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recepies',
@@ -8,19 +9,28 @@ import { RecipeService } from './Services/RecepieService.service';
   styleUrls: ['./recepies.component.css']
 })
 export class RecepiesComponent implements OnInit {
-  setItemRecipe!:Recepie
+  // setItemRecipe!:Recepie
 
-  constructor(private recepeService:RecipeService) { }
+
+  constructor() { }
+
 
   ngOnInit(): void {
-     this.recepeService.recepieSelected.subscribe((recipe:Recepie)=>{
-      this.setItemRecipe=recipe
-     })
+
+
+    //  this.recepeService.recepieSelected.subscribe((recipe:Recepie)=>{
+    //   console.log(recipe);
+            
+    //   this.setItemRecipe=recipe
+
     console.log("oninit load");
+     }
+
+
       
   }
 
 
 
 
-}
+

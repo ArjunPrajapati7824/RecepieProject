@@ -1,8 +1,8 @@
           
-          <a href="#" class="list-group-item clearfix "  (click)="getdata()" >
-      <div class="d-flex justify-content-around">
-        <div class="pull-left">
-          <h4 lass="list-group-item-heading">{{ recepie.name }}</h4>
+          <a  class="list-group-item clearfix " [routerLinkActive]="'linkActive'" [routerLink]="['recepieDetail',id]" >
+      <div class="d-flex justify-content-around" >
+        <div class="pull-left" >
+          <h4 lass="list-group-item-heading">{{ recepie.name }}  </h4>
           <p class="list-group-item-text">{{ recepie.description }}</p>
         </div>
         <div>

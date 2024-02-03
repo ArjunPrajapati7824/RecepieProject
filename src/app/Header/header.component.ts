@@ -1,4 +1,5 @@
-import {Component, EventEmitter,Output } from '@angular/core'
+import {Component, EventEmitter,Output ,Input} from '@angular/core'
+import { Recepie } from '../Recepies/recepies.model'
 
 @Component({
     selector:'app-header',
@@ -8,11 +9,11 @@ import {Component, EventEmitter,Output } from '@angular/core'
 
 export class HeaderComponent{
 
-    @Output() sendNavigate=new EventEmitter<string>();
+    // @Output() sendNavigate=new EventEmitter<string>();
     
-    setItemSelected(item:string){
-        this.sendNavigate.emit(item)       
-    }
+    // setItemSelected(item:string){
+    //     this.sendNavigate.emit(item)       
+    // }
 
 
 

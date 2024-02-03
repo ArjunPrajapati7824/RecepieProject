@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recepie } from './Recepies/recepies.model';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'startProjectRecepie';
 
-  setItem='Recepi'
-  onSeletctedData(item:string){
-    this.setItem=item
+  clickItem!:Recepie
 
+  getItem(item:Recepie){
+    this.clickItem=item
   }
 }

@@ -18,7 +18,7 @@
 
 
 <h1 *ngIf="finalData">Recepie Detail</h1>
- <a href="#" class="list-group-item clearfix "  >
+ <a  class="list-group-item clearfix "  >
   <div class="d-flex justify-content-around">
     <div class="pull-left">
       <h4 lass="list-group-item-heading">{{ finalData.name }}</h4>
@@ -43,8 +43,8 @@
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" style="cursor: pointer;" (click)="addIngrediants()" >Too Shopping List</a></li>
-    <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-    <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+    <li><a class="dropdown-item" [routerLink]="['/Recepie/recepieeEdit',id]" >Edit Recipe</a></li>
+    <li><a class="dropdown-item" >Delete Recipe</a></li>
   </ul>
 </div>
 

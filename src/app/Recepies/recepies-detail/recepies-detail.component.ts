@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Recepie } from '../recepies.model';
 import { RecipeService } from '../Services/RecepieService.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recepies-detail',
@@ -9,15 +10,29 @@ import { RecipeService } from '../Services/RecepieService.service';
 })
 export class RecepiesDetailComponent implements OnInit {
 
-  @Input() finalData!:Recepie
+  finalData!:Recepie
+  id:number=0
   
-  constructor(private service :RecipeService) { 
+  constructor(private service :RecipeService,private activeRoute:ActivatedRoute) { 
     
     console.log("hello detail");
   }
   
+  
+  ngOnInit(): void {
+    this.activeRoute.params.subscribe(paramId=>{
+      this.id=+paramId['id']
+      this.finalData=this.service.getRecepieId(this.id)
+    })   
+    // console.log("docheck in detail",this.finalData);
+    
+  }
+
   ngdoCheck(){
-    console.log("docheck in detail",this.finalData);
+    // this.service.recepieSelected.subscribe((recepie)=>{
+    //   this.finalData=recepie
+    //  })   
+    // console.log("docheck in detail",this.finalData);
   }
 
   addIngrediants(){
@@ -27,15 +42,6 @@ export class RecepiesDetailComponent implements OnInit {
   }
 
   
-  ngOnInit(): void {
-  //   this.finalData.push({
-  //     name:"burger",
-  //     description:"testy",
-  //     imagePath:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5paige7h1aqPHYUwoAIYH3Sn336u6sXCxEw&usqp=CAU "
-  //   })
-  //   console.log(this.finalData);
-    
-  }
 
 
 

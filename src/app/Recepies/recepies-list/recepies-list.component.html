@@ -1,17 +1,36 @@
-<div class="row" style="margin-top: 10px">
+<!-- <div class="row" style="margin-top: 10px">
   <div class="col-xs-12">
-    <button class="btn btn-success">Get Recepie</button>
+    
+      <a  class="list-group-item clearfix "  *ngFor="let data of recepie"  (click)="getdata(data)"  >
+        <div class="d-flex justify-content-around" >
+          <div class="pull-left" >
+          <h4 lass="list-group-item-heading">{{ data.name }}</h4>
+          <p class="list-group-item-text">{{ data.description }}</p>
+        </div>
+        <div>
+          <img
+          [src]="data.imagePath"
+            class="img-responsive"
+            style="max-height: 80px"
+            />
+        </div>
+      </div>
+      <hr />
+    </a>
   </div>
 </div>
 <hr />
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-xs-12"> -->
    
-    <app-recepies-item *ngFor="let data of recepies"
-    [recepie]="data" 
+   
+    <!-- <router-outlet></router-outlet> -->
+    <button class="btn btn-success" style="margin-bottom: 10px;" (click)="addnewRecepie()">New Recepie</button> 
+    <app-recepies-item *ngFor="let data of recepie; let i =index"
+    [recepie] ="data" [id] ="i" 
     ></app-recepies-item>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 
 <!--card view-->
 <!-- <div  style="margin-top: 10px" >

@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { DropDownDirective } from './sharedModels/DropDown.directive';
 import { RecipeService } from './Recepies/Services/RecepieService.service';
 import { ShoppingListService } from './shopping-list/Services/ShoppingListService.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { RecepieEditComponent } from './Recepies/recepie-edit/recepie-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ShoppingListService } from './shopping-list/Services/ShoppingListServic
     RecepiesListComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropDownDirective
+    DropDownDirective,
+    ErrorPageComponent,
+    RecepieEditComponent
 
   ],
   imports: [
