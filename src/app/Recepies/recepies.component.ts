@@ -2,6 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recepie } from './recepies.model';
 import { RecipeService } from './Services/RecepieService.service';
 import { Router } from '@angular/router';
+import { Observable, Subscription, interval } from 'rxjs';
+import {map} from 'rxjs/operators'
 
 @Component({
   selector: 'app-recepies',
@@ -9,28 +11,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./recepies.component.css']
 })
 export class RecepiesComponent implements OnInit {
-  // setItemRecipe!:Recepie
 
-
-  constructor() { }
+  
+  constructor() { 
+    
+  }
 
 
   ngOnInit(): void {
 
+    
 
-    //  this.recepeService.recepieSelected.subscribe((recipe:Recepie)=>{
-    //   console.log(recipe);
-            
-    //   this.setItemRecipe=recipe
-
-    console.log("oninit load");
      }
 
 
-      
-  }
 
 
-
+}
 
 

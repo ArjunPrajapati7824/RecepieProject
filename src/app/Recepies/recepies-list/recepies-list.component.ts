@@ -18,21 +18,13 @@ export class RecepiesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
     this.recepie=this.recepeService.getRecepies()
 
-    // this.recepies=this.recepeService.getRecepies()
   }
 
-  // getdata(data:Recepie){
-  //   console.log("get data called");
-    
-  //     this.recepeService.recepieSelected.next(data)
 
-  //     this.Router.navigate(['/Recepie/recepieDetail',1])
-  //   // this.sendItemrecepie.emit()without service
-
-
-    
   // }
 
   addnewRecepie(){

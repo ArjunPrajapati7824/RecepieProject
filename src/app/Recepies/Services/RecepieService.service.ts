@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import {  Injectable } from '@angular/core';
 import { Recepie } from '../recepies.model';
 import { Ingrediants } from 'src/app/sharedModels/ingrediants.model';
 import { ShoppingListService } from 'src/app/shopping-list/Services/ShoppingListService.service';
@@ -8,15 +8,15 @@ import { BehaviorSubject } from 'rxjs';
 export class RecipeService{
 
     
-    recepieSelected =new BehaviorSubject<Recepie>(new Recepie('Pizza',
-    'veru cheezy',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5paige7h1aqPHYUwoAIYH3Sn336u6sXCxEw&usqp=CAU ',
-    [   
-        new Ingrediants('Tomato',10),
-        new Ingrediants('Rice',20),
-    ]
+    // recepieSelected =new BehaviorSubject<Recepie>(new Recepie('Pizza',
+    // 'veru cheezy',
+    // 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5paige7h1aqPHYUwoAIYH3Sn336u6sXCxEw&usqp=CAU ',
+    // [   
+    //     new Ingrediants('Tomato',10),
+    //     new Ingrediants('Rice',20),
+    // ]
     
-    ));
+    // ));
     
     private recepies:Recepie[]=[
         new Recepie('Pizza',
